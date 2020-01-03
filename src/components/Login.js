@@ -59,6 +59,7 @@ const LoginForm = ({toggle, user, setUserinLogin}) => {
     // }
 
 const handleInput = e => {
+    e.preventDefault()
     const { name, value } = e.target
     setUserinfo({
         ...userInfo,
@@ -70,7 +71,7 @@ const handleInput = e => {
     // })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault()
         Axios({
             method: 'post',
